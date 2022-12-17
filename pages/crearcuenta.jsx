@@ -5,7 +5,7 @@ import * as Yup from 'yup'
 import authContext from '../context/auth/authContext'
 import Alerta from '../components/Alerta'
 
-const crearcuenta = () => {
+const CrearCuenta = () => {
 
     //Acceder al state
     const AuthContext = useContext(authContext);
@@ -119,4 +119,4 @@ const crearcuenta = () => {
   )
 }
 
-export default crearcuenta
+export default CrearCuenta

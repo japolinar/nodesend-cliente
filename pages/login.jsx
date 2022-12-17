@@ -6,7 +6,7 @@ import authContext from '../context/auth/authContext'
 import Alerta from '../components/Alerta'
 import { useRouter} from 'next/router'
 
-const login = () => {
+const Login = () => {
 
     const AuthContext = useContext(authContext);
     const {mensaje, iniciarSesion, autenticado} = AuthContext;
@@ -109,4 +109,4 @@ const login = () => {
   )
 }
 
-export default login
+export default Login

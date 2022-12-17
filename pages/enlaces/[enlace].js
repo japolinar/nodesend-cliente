@@ -34,7 +34,7 @@ export async function getServerSidePaths(){
 export default  ({enlace}) => {
   //Context de la APP
   const AppContext = useContext(appContext);
-  const {mostrarAlerta, mensaje_archivo} = AppContext    
+  const {mostrarAlerta, mensaje_archivo} = AppContext;    
 
 
   const [tienePassword, setTienePassword] = useState(enlace.password);
@@ -55,7 +55,7 @@ export default  ({enlace}) => {
       setTienePassword(resultado.data.password)
       
     } catch (error) {
-      console.log(error.response.data.msg);
+      //console.log(error.response.data.msg);
       mostrarAlerta(error.response.data.msg)
     }
   }
