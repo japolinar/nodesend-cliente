@@ -11,7 +11,7 @@ const Dropzone = () => {
     const AppContext = useContext(appContext);
     const {mostrarAlerta, subirArchivos, cargando, crearEnlace} = AppContext    
 
-    //Context de aitenticacion
+    //Context de autenticacion
     const AuthContext = useContext(authContext);
     const { usuario, autenticado} = AuthContext    
 

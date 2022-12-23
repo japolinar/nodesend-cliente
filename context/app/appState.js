@@ -21,7 +21,7 @@ const AppState = ({children}) =>{
         mensaje_archivo: null,
         nombre: '',
         nombre_original: '',
-        cargado: false,
+        cargando: false,
         descargas: 1,
         password: '',
         autor: null,
@@ -72,7 +72,7 @@ const AppState = ({children}) =>{
         }
     }
 
-    //Crea un enlace cuan do se sube el archivo
+    //Crea un enlace cuando se sube el archivo
     const crearEnlace = async () =>{
         const data = {
             nombre: state.nombre,
@@ -105,6 +105,7 @@ const AppState = ({children}) =>{
 
     //Agregar el password
     const agregarPassword = (password) =>{
+        //console.log(password);
         dispatch({
             type: AGREGAR_PASSWORD,
             payload: password
@@ -127,7 +128,7 @@ const AppState = ({children}) =>{
                 mensaje_archivo: state.mensaje_archivo,
                 nombre: state.nombre,
                 nombre_original: state.nombre_original,
-                cargado: state.cargado,
+                cargando: state.cargando,
                 descargas: state.descargas,
                 password: state.password,
                 autor: state.autor,

@@ -6,10 +6,10 @@ import appContext from "../context/app/appContext";
 import Link from "next/link";
 import Alerta from "../components/Alerta";
 
-export default function Home() {
+export default function Index() {
 
   const AuthContext = useContext(authContext);
-  const {usuarioAutenticado} = AuthContext
+  const { usuarioAutenticado } = AuthContext
 
   //Extraer el mensaje de error de archivos
   const AppContext = useContext(appContext);
@@ -72,9 +72,7 @@ export default function Home() {
           </>
         )}
 
-      </div>
-
-      
+      </div>      
     </Layout>
   )
 }

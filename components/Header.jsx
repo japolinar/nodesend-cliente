@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image';
 import authContext from '../context/auth/authContext';
 import appContext from '../context/app/appContext';
 import { useRouter } from 'next/router'
@@ -30,7 +31,7 @@ const Header = () => {
   return (
     <header className=' py-8 flex flex-col md:flex-row items-center justify-between'>
       <Link href={"/"}>
-        <img onClick={ ()=> redireccionar() } src="/logo.svg" alt="Logotipo" className='w-64 mb-8 md:mb-0'/>
+        <Image onClick={ ()=> redireccionar() } src="/logo.svg" alt="Logotipo" width={100} height={100} className='w-64 mb-8 md:mb-0'/>
       </Link>
 
       {usuario ? (

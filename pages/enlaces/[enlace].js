@@ -31,7 +31,7 @@ export async function getServerSidePaths(){
   }
 }
 
-export default  ({enlace}) => {
+const  Enlace = ({enlace}) => {
   //Context de la APP
   const AppContext = useContext(appContext);
   const {mostrarAlerta, mensaje_archivo} = AppContext;    
@@ -42,8 +42,9 @@ export default  ({enlace}) => {
   //console.log(tienePassword);
   //console.log(enlace);
 
-  const verificarPassord = async (e) =>{
+  const verificarPassord = async (e) => {
     e.preventDefault();
+   
     const data = {
       password
     }
@@ -52,7 +53,7 @@ export default  ({enlace}) => {
       const resultado = await clienteAxios.post(`/api/enlaces/${enlace.enlace}`, data);
       //console.log(resultado);
       //enlace.archivo = resultado.data.archivo
-      setTienePassword(resultado.data.password)
+      setTienePassword(resultado.data.password);
       
     } catch (error) {
       //console.log(error.response.data.msg);
@@ -114,5 +115,7 @@ export default  ({enlace}) => {
     </Layout>
   )
 }
+
+export default Enlace;
 
 

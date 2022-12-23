@@ -26,20 +26,20 @@ export default (state, action) => {
         case SUBIR_ARCHIVO:
             return{
                 ...state,
-                cargado: true
+                cargando: true
             }
         case SUBIR_ARCHIVO_EXITO:
             return{
                 ...state,
                 nombre: action.payload.nombre,
                 nombre_original: action.payload.nombre_original,
-                cargado: false
+                cargando: false
             }
         case SUBIR_ARCHIVO_ERROR:
             return{
                 ...state,
                 mensaje_archivo: action.payload,
-                cargado: false
+                cargando: false
             }
         case CREAR_ENLACE_EXITO:
             return {
@@ -52,7 +52,7 @@ export default (state, action) => {
                 mensaje_archivo: null,
                 nombre: '',
                 nombre_original: '',
-                cargado: false,
+                cargando: false,
                 descargas: 1,
                 password: '',
                 autor: null,

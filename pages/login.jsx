@@ -4,7 +4,7 @@ import {useFormik} from 'formik'
 import * as Yup from 'yup'
 import authContext from '../context/auth/authContext'
 import Alerta from '../components/Alerta'
-import { useRouter} from 'next/router'
+import { useRouter } from 'next/router'
 
 const Login = () => {
 
